@@ -20,6 +20,7 @@
   "homepage": "https://github.com/JoaoVitorDiass/curso_node#readme",
   "description": "",
   "dependencies": {
+    "body-parser": "^1.20.2",
     "debug": "^4.3.4",
     "express": "^4.18.2",
     "http": "^0.0.1-security",
