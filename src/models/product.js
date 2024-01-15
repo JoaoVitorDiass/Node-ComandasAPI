@@ -11,9 +11,9 @@ const schema = new Schema({
     },
     slug: {
         type: String,
-        required: true,
+        required: [true, 'O slug é obrigatório'],
         trim: true,
-        index: true,
+        index: true, // cadeira-gamer
         unique: true
     },
     description: {
@@ -22,7 +22,7 @@ const schema = new Schema({
     },
     price: {
         type: Number,
-        required: true,
+        required: true
     },
     active: {
         type: Boolean,
@@ -32,7 +32,7 @@ const schema = new Schema({
     tags: [{
         type: String,
         required: true
-    }]
+    }],
 });
 
 module.exports = mongoose.model('Product', schema);
