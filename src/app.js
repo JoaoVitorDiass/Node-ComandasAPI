@@ -12,15 +12,21 @@ mongoose.connect('mongodb+srv://joovitordiasdasilva:B4uCuVWiZyloeOUy@ndstr.qcbuo
 
 // carrega as models
 const Product = require("./models/product");
+const Customer = require("./models/customer");
+const Order = require("./models/order");
 
 // Carrega as Rotas
 const index = require('./routes/index');
 const product = require('./routes/product');
+const customer = require('./routes/customer');
+const order = require('./routes/order');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use('/', index);
 app.use('/products', product);
+app.use('/customers', customer);
+app.use('/orders', order);
 
 module.exports = app;
